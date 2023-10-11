@@ -1,0 +1,32 @@
+<div *ngIf="funcionario">
+    <div class="content">
+        <h2>{{funcionario.name}}</h2>
+        <div>
+            <label for="name">Nome do Funcionário:</label>
+            <input [(ngModel)]="funcionario.name" placeholder="Nome" id="name">
+        </div>
+        <div>
+            <label for="place">Local:</label>
+            <select [(ngModel)]="funcionario.place" id="place">
+                <option value="" >Local</option>
+                <option value="Guarulhos">Guarulhos</option>
+                <option value="Cumbica">Cumbica</option>
+                <option value="Tatuapé">Tatuapé</option>
+                <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+                <option value="Vila Guilherme">Vila Guilherme</option>
+            </select>
+        </div>
+        <div>
+            <label for="periodo">Periodo:</label>
+            <select [(ngModel)]="funcionario.period" placeholder="Periodo"
+                id="periodo">
+                <option value="" selected>Período</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Noite">Noite</option>
+            </select>
+        </div>
+        <span class="buttonModel" (click)="updateFuncionario(funcionario)" *ngIf="funcionario.id">Save</span>
+        <span class="buttonModel del" (click)="deleteFuncionario(funcionario)" *ngIf="funcionario.id">Delete</span>
+        <span class="buttonModel" (click)="createFuncionario(funcionario)" *ngIf="!funcionario.id">Criar</span>
+    </div>
+</div>

@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background: linear-gradient(to right, rgba(black, 0.4), rgba(black, 0.4)), url(./assets/glassmorphism.jpg);
+    background-size: cover;
+}
+
+#mainPanel{
+    padding: 0 0 30px 0;
+    max-width: 80vw;
+    background-color: rgba(white, 0.1);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(black, 0.3), inset -5px 5px 10px rgba(white, 0.1);
+
+    .panelHeading {
+        width: -webkit-fill-available;
+        width: -moz-available;
+        background-color: rgba(white, 0.2);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        text-shadow: -1px 1px black;
+    }
+
+    table {
+        padding: 25px;
+        border-collapse: collapse;
+        margin: 10px 30px;
+
+
+        tr {
+        border-collapse: separate;
+        height: 60px;
+        border-bottom: 2px solid rgba(white, 0.3);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    th {
+        font-size: 1.3em;
+    }
+
+     th, td {
+        text-shadow: 0 0 10px rgba(black, 0.8);
+        width: auto;
+        text-align: left;
+        padding: 20px;
+        margin: 10px;
+     }
+     span {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 12px;
+        background-color: rgba(white, 0.3);
+        border-radius: 10px;
+        transition: 0.3s all ease;
+        &:hover {
+            box-shadow: 0 0 10px rgba(white, 0.3);
+        }
+     }
+
+    }
+
+    span.buttonModel {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 12px;
+        background-color: green;
+        border-radius: 10px;
+        transition: 0.3s all ease;
+        margin: 15px;
+        &:hover {
+            box-shadow: 0 0 10px rgba(white, 0.3);
+        }
+
+        &.del {
+            background: rgb(151, 4, 4);
+        }
+     }
+}
+
+#toggleEditor {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    background-color: rgba(black, 0.4);
+    padding: 20px;
+
+    .content {
+        
+
+        input, select {
+            background: transparent;
+            border: 1px solid rgba(white, 0.7);
+            padding: 5px;
+            margin: 10px 10px;
+            border-radius: 10px;
+
+            &::placeholder {
+                color: rgba(white, 0.6);
+            }
+        }
+
+        label {
+            text-shadow: 0 0 10px rgba(black, 0.8);
+        }
+
+        option {
+            -webkit-background: transparent;
+            color: black;
+        }
+    }
+
+ 
+}

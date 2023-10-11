@@ -1,0 +1,37 @@
+
+
+
+<div id="mainPanel">
+
+  <div class="panelHeading">
+    <h1>Tabela de Funcionários</h1>
+  </div>
+
+  <table>
+  
+    <thead>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Local</th>
+      <th>Período</th>
+      <th>Ação</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let funcionario of funcionarios">
+        <td>{{funcionario.id}}</td>
+        <td>{{funcionario.name}}</td>
+        <td>{{funcionario.place}}</td>
+        <td>{{funcionario.period}}</td>
+        <td><span (click)="editFuncionario(funcionario); activeColor();">Editar</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-edit-funcionario id="toggleEditor" [funcionario]="funcionarioToEdit" (funcionariosUpdated)="updateFuncionarioList($event)"></app-edit-funcionario>
+
+  <span class="buttonModel" (click)="initNewFuncionario()">Criar Novo</span>
+
+</div>
+
+
+
